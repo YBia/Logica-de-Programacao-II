@@ -1,0 +1,50 @@
+<canvas width="600" height="400"></canvas>
+
+<!-- <script>
+
+var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaFlor(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2*3.14);
+        pincel.fill();
+    }
+  desenhaFlor (300, 200, 2 * 3.14, "Red");
+  desenhaFlor (300, 187, 2 * 3.14, "Yellow");
+  desenhaFlor (300, 213, 2 * 3.14, "Blue");
+  desenhaFlor(287, 200, 2 * 3.14, "Orange");
+  desenhaFlor (313, 200, 2 * 3.14, "Black");
+
+</script>
+-->
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    function desenhaEsquadro(xa, ya, xc, yc, cor) {
+
+        pincel.fillStyle = cor
+        pincel.beginPath();
+        pincel.moveTo(xa, ya);
+        pincel.lineTo(xa, yc);
+        pincel.lineTo(xc, yc);
+        pincel.fill();
+
+        pincel.fillStyle = 'white'
+        pincel.beginPath();
+        pincel.moveTo((6*xa + xc)/7, (9*ya + 5*yc)/14);
+        pincel.lineTo((6*xa + xc)/7, (ya + 6*yc)/7);
+        pincel.lineTo((5*xa + 9*xc)/14, (ya + 6*yc)/7);
+        pincel.fill();
+    }
+
+ desenhaEsquadro(50, 50, 400, 400, 'black');
+
+</script>
